@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import "./Login.css";
+import { Link } from 'react-router-dom'
 import { getAuth, RecaptchaVerifier, signInWithPhoneNumber } from "firebase/auth";
 
 class FluidInput extends React.Component {
@@ -77,8 +78,8 @@ class Login extends React.Component {
           Login
         </div>
         <FluidInput type="text" label="name" id="name" style={style} />
-        <FluidInput type="phone" label="number" id="number" style={style} />
-        <Button buttonText="submit" buttonClass="submit-button" />
+        <FluidInput type="text" label="password" id="password" style={style} />
+        <Button buttonText="submit" buttonClass="submit-button" ><Link to="/">Submit</Link></Button>
       </div>
     );
   }
